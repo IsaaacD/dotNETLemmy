@@ -12,6 +12,8 @@ public abstract class Response : IJsonObject
     [JsonInclude] public string? Error { get; private set; }
     public bool HasError => Error is not null;
 
+    public string? NextPage { get; set; }
+
     public static async Task<TResponse> FromHttpResponseMessage<TResponse>(HttpResponseMessage message)
         where TResponse : Response, new()
     {
