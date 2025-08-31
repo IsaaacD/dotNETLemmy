@@ -23,6 +23,8 @@ public sealed class LemmyHttpClient : ILemmyHttpClient
     private HttpClient Client { get; }
 
     public string BaseAddress { get; set; } = string.Empty;
+    public string? Username { get; set; }
+    public string? Password { get; set; }
 
     public async Task<TResponse> SendAsync<TResponse>(IForm form, CancellationToken cancellationToken = default)
         where TResponse : Response, new()

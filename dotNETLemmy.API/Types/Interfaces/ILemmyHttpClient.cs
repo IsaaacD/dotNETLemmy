@@ -6,7 +6,8 @@ namespace dotNETLemmy.API.Types;
 public interface ILemmyHttpClient
 {
     public string BaseAddress { get; set; }
-
+    public string? Username { get; set; }
+    public string? Password { get; set; }
     /// <summary>
     ///     Sends an asynchronous HTTP request and returns the deserialized response.
     ///     <para>
