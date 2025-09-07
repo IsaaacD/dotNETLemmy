@@ -11,7 +11,7 @@ public class GetPostsForm : IForm
     public int? Limit { get; set; }
     public int? Page { get; set; }
     public bool? SavedOnly { get; set; }
-
+    public string? PageCursor { get; set; }
     public SortType? Sort { get; set; }
 
     [JsonPropertyName("type_")]
