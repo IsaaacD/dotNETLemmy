@@ -14,6 +14,7 @@ public class GetCommentsForm : IForm
     public int? ParentId { get; set; }
     public int? PostId { get; set; }
     public int? SavedOnly { get; set; }
+    public string? PageCursor { get; set; }
     public CommentSortType? Sort { get; set; }
 
     [JsonPropertyName("type_")]
