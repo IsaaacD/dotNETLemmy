@@ -314,6 +314,8 @@ public sealed class LemmyHttpClient : ILemmyHttpClient
     public Task<VerifyEmailResponse> VerifyEmail(VerifyEmailForm form, CancellationToken cancellationToken = default) =>
         SendAsync<VerifyEmailResponse>(form, cancellationToken);
 
+    public Task<GetCommentResponse> GetComment(GetCommentForm form, CancellationToken cancellationToken = default) => SendAsync<GetCommentResponse>(form, cancellationToken);
+
     private class LemmyHttpClientException : HttpRequestException
     {
     }

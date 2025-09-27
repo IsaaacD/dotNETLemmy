@@ -366,6 +366,17 @@ public interface ILemmyHttpClient
     public Task<GetCommentsResponse> GetComments(GetCommentsForm form, CancellationToken cancellationToken = default);
 
     /// <summary>
+    ///     Gets comments.
+    /// </summary>
+    /// <param name="form">The form to send for retrieving comments.</param>
+    /// <param name="cancellationToken">Optional cancellation token to pass through to HttpClient</param>
+    /// <returns>
+    ///     The task object representing the asynchronous operation. The task result contains the response with the retrieved
+    ///     comments.
+    /// </returns>
+    public Task<GetCommentResponse> GetComment(GetCommentForm form, CancellationToken cancellationToken = default);
+
+    /// <summary>
     ///     Gets a community.
     /// </summary>
     /// <param name="form">The form to send for retrieving a community.</param>
